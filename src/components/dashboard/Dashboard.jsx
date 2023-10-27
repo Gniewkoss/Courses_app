@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const {
+    setLogged,
     slider,
     setSlider,
     sliderImg,
@@ -57,6 +58,10 @@ const Dashboard = () => {
     }));
   };
 
+  const handleLogout = () => {
+    setLogged(false);
+  };
+
   return (
     <div className="dashboard-container m-5">
       <h2 className="main">Admin panel</h2>
@@ -68,6 +73,7 @@ const Dashboard = () => {
       <div className="section-settings bg-white p-4 shadow-lg rounded">
         <div className="title mb-4">
           <h2 className="text-xl font-bold mb-2">Slider</h2>
+
           <button
             className={`bg-${
               slider ? "red" : "green"
@@ -76,6 +82,7 @@ const Dashboard = () => {
           >
             {slider ? "OFF" : "ON"}
           </button>
+          <button onClick={handleLogout}>Logout</button>
         </div>
         <div className="sliders-img mb-4">
           <h2 className="text-xl font-bold mb-2">Sliders IMGs</h2>

@@ -7,7 +7,7 @@ export const AppContextProvider = ({ children }) => {
   const [slider, setSlider] = useState(true);
   const [sliderImg, setSliderImg] = useState({ 1: "", 2: "", 3: "" });
   const [boxColor, setBoxColor] = useState({ 1: "", 2: "", 3: "" });
-  const [courseOrder, setCourseOrder] = useState({ 1: 1, 2: 2, 3: 3 }); // Added courseOrder
+  const [courseOrder, setCourseOrder] = useState({ 1: 1, 2: 2, 3: 3 });
   const [footerText, setFooterText] = useState({ 1: "", 2: "" });
 
   return (
@@ -21,8 +21,8 @@ export const AppContextProvider = ({ children }) => {
         setSliderImg,
         boxColor,
         setBoxColor,
-        courseOrder, // Added courseOrder
-        setCourseOrder, // Added setCourseOrder
+        courseOrder,
+        setCourseOrder,
         footerText,
         setFooterText,
       }}
